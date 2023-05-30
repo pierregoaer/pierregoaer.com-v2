@@ -1,0 +1,25 @@
+nav {
+    /*height: 100px;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.04) 0px 2px 4px -1px;
+    z-index: 20;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 60px;
+}
+
