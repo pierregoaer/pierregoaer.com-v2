@@ -8,6 +8,7 @@ nav {
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.04) 0px 2px 4px -1px;
     z-index: 20;
+    background-color: white;
 }
 
 .nav-container {

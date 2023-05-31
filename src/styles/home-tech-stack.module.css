@@ -1,0 +1,65 @@
+.home-tech-stack {
+}
+
+.home-tech-stack .intro-text p {
+    margin-bottom: 40px;
+}
+
+.home-tech-stack .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.home-tech-stack .stack {
+    padding: 40px 20px;
+    border-radius: var(--border-radius-main);
+    background-color: var(--primary-accent-color-transparent);
+    box-shadow: rgba(17, 17, 26, 0.1) 0 0 16px;
+}
+
+.home-tech-stack .stack h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-tech-stack .stack-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.home-tech-stack .stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-tech-stack .stack-item img {
+    height: 30px;
+    width: auto;
+    margin-bottom: 6px;
+}
+
+.home-tech-stack .stack-item p {
+    font-weight: 200;
+}
+
+@media (max-width: 1000px) {
+    .home-tech-stack .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home-tech-stack .container {
+        max-width: 500px;
+    }
+}
+
+/*@media (max-width: 500px) {*/
+/*    .home-tech-stack .stack-list {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
