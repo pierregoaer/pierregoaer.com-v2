@@ -1,5 +1,14 @@
 module.exports = {
+    siteMetadata: {
+        siteUrl: `https://pierregoaer.com`,
+    },
     plugins: [
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                icon: 'src/images/icon.png',
+            },
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -17,5 +26,11 @@ module.exports = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-image`,
+        {
+            resolve: "gatsby-plugin-anchor-links",
+            options: {
+                offset: -50
+            }
+        }
     ],
 }

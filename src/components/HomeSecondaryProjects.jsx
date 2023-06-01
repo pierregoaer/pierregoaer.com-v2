@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import * as styles from "../styles/home-secondary-projects.module.css";
 import secondaryProjects from "../content/secondaryProjects";
 import SecondaryProjectCard from "./SecondaryProjectCard";
 
 export default function HomeSecondaryProjects() {
-        const projectsElements = secondaryProjects.map(project => <SecondaryProjectCard project={project}/>)
+    const [projects, setProjects] = useState(secondaryProjects)
+    const projectsElements = projects.map(project => <SecondaryProjectCard project={project}/>)
 
     return (
         <section className={styles.homeSecondaryProjects}>
@@ -16,6 +17,7 @@ export default function HomeSecondaryProjects() {
                 <div className={styles.container}>
                     {projectsElements}
                 </div>
+                {/*<button className="btn-secondary">See more</button>*/}
             </div>
         </section>
     )

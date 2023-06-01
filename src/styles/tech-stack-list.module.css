@@ -21,3 +21,9 @@
 .stack-item p {
     font-weight: 200;
 }
+
+@media (max-width: 1000px) {
+    .stack-list {
+        justify-content: center !important;
+    }
+}

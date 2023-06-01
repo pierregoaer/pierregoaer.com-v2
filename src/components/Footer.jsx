@@ -1,32 +1,20 @@
 import React from 'react'
-import * as styles from '../styles/home-hero.module.css'
-import {StaticImage} from "gatsby-plugin-image";
+import * as styles from '../styles/footer.module.css'
 import {Link} from "gatsby";
+import {AnchorLink} from "gatsby-plugin-anchor-links";
 
-export default function HomeHero() {
+export default function Footer() {
     return (
-        <section className={styles.homeHero} id="hero">
-            <div className={styles.homeHeroInner}>
-                <div className={styles.homeHeroContainer}>
-                    <div className={styles.homeHeroImg}>
-                        <StaticImage
-                            src="../images/hero.png"
-                            alt="Logo Electricien Nîmes"
-                        />
-                    </div>
-
-                    <div className={styles.homeHeroText}>
-                        <div className={styles.name}>Pierre Goaer</div>
-                        <h1>Software Developer</h1>
-                        <p>Results-oriented software developer with 5+ years of experience in various technical roles.
-                            Skilled in full-stack technologies including Python, JavaScript, and SQL. I have a passion
-                            for building digital solutions that help solve real-life problems.</p>
-                        <div className={styles.buttons}>
-                            <a href={'Resume Pierre Goaer.pdf'} download target='_blank' className="btn-secondary">Download
-                                resume</a>
-                            <Link to={'mailto:hello@pierregoaer.com'} className="btn-tertiary">Contact</Link>
-                        </div>
-                        <ul className={styles.socialLinks}>
+        <footer>
+            <div className={styles.main}>
+                <ul className={styles.nav}>
+                    <li><AnchorLink to={'#about'}>About</AnchorLink></li>
+                    <li><AnchorLink to={'#tech'}>Tech</AnchorLink></li>
+                    <li><AnchorLink to={'#work'}>Work</AnchorLink></li>
+                    {/*<li><AnchorLink to={'#blog'}>Blog</AnchorLink></li>*/}
+                    <li><AnchorLink to={'#contact'}>Contact</AnchorLink></li>
+                </ul>
+                <ul className={styles.socials}>
                             <li>
                                 <a href="mailto:hello@pierregoaer.com">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -68,9 +56,10 @@ export default function HomeHero() {
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
             </div>
-        </section>
+            <div className={styles.copyrights}>
+                © {new Date().getFullYear()} Pierre Goaer
+            </div>
+        </footer>
     )
 }

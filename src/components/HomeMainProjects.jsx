@@ -7,7 +7,7 @@ export default function HomeMainProjects() {
     const projectsElements = mainProjects.map(project => <MainProjectCard project={project}/>)
 
     return (
-        <section className={styles.homeMainProjects} id="main-projects">
+        <section className={styles.homeMainProjects} id="work">
             <div className="section-inner">
                 <div className={styles.introText}>
                     <h2>Some things I've built</h2>

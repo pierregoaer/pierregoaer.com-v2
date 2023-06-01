@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 150px;
+    gap: 200px;
 }
 
 .project-container {
     display: flex;
     gap: 40px;
+    align-items: center;
     /*justify-content: space-between;*/
 }
 
@@ -46,17 +47,16 @@
     font-weight: 500;
 }
 
-.project-text .project-header {
-    font-weight: 200;
-    contain: red;
-    margin-bottom: 40px;
+.project-text .project-description {
+    margin-bottom: 30px;
 }
 
 .project-buttons {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     gap: 15px;
 }
+
 
 .app-button,
 .code-button {
@@ -85,29 +85,43 @@
 
 @media (max-width: 1000px) {
     .project-container,
-    .project-container:nth-child(even){
+    .project-container:nth-child(even) {
         flex-direction: column;
         align-items: center;
     }
 
+    /*.project-image {*/
+    /*    max-width: 400px;*/
+    /*}*/
     .project-image {
-        max-width: 400px;
+        width: 80%;
     }
 
     .project-text {
         align-items: center;
+        text-align: center;
+    }
+
+    .project-text .stack-list {
+        justify-content: center;
     }
 
     .project-buttons {
         flex-direction: column;
+        gap: 20px;
         width: fit-content;
         text-align: center;
     }
-}
 
-@media (max-width: 1000px) {
-    .project-image {
-        width: 80%;
+    .code-button,
+    .app-button {
+        font-size: 1.2rem;
+    }
+
+    .project-buttons svg {
+        height: 25px;
+        margin-right: 5px;
+        fill: white;
     }
 }
 

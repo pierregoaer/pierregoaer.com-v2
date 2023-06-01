@@ -13,10 +13,7 @@ export default function HomeTechStack() {
         )
     })
     return (
-        <section className={styles.homeTechStack}
-                 data-sal="slide-up"
-                 data-sal-delay="300"
-                 data-sal-easing="ease">
+        <section className={styles.homeTechStack} id="tech">
             <div className="section-inner">
                 <div className={styles.introText}>
                     <h2>The things I know</h2>

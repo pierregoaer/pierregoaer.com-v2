@@ -3,8 +3,8 @@ import * as styles from "../styles/home-about-me.module.css";
 
 export default function HomeAboutMe() {
     return (
-        <section className={styles.homeAboutMe}>
-            <div className={styles.homeAboutMeInner}>
+        <section className={styles.homeAboutMe} id="about">
+            <div className={styles.inner}>
                 <h2>About Me</h2>
                 <p>Hi there, my name is Pierre Goaer, I'm a software developer and here is my story.</p>
                 <p>I've always had a passion for solving problems and trying to understand how things work. This

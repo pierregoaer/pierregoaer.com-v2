@@ -1,11 +1,25 @@
-.home-about-me-inner {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 80px 20px 80px 60px;
+.home-about-me {
+    padding: 20px 0;
+}
+
+.home-about-me .inner {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 80px 70px;
+    /*border: 1px solid var(--secondary-accent-color);*/
+    background-color: var(--primary-accent-color);
+    border-radius: var(--border-radius-main);
+    box-shadow: rgba(17, 17, 26, 0.1) 0 0 16px;
+}
+
+.home-about-me h2,
+.home-about-me p {
+    color: white;
 }
 
 @media (max-width: 800px) {
-    .home-about-me-inner {
-        padding: 80px 20px;
+    .home-about-me .inner {
+        padding: 80px 40px;
+        border-radius: 0;
     }
 }

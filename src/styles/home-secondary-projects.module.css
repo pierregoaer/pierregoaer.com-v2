@@ -46,8 +46,8 @@
 
 .project-description {
     font-weight: 200;
-    font-size: .95rem;
-    line-height: 1.2;
+    font-size: 1.1rem;
+    line-height: 1.5;
     margin-bottom: 45px;
 }
 
@@ -58,12 +58,17 @@
 
 .project-stack p {
     color: var(--dark-grey);
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 300;
     padding: 2px 4px;
     border-radius: var(--border-radius-main);
     background-color: var(--primary-accent-color-transparent);
     margin-bottom: 0;
+}
+
+.home-secondary-projects button {
+    display: block;
+    margin: 50px auto 20px auto;
 }
 
 @media (max-width: 1050px) {
@@ -79,5 +84,10 @@
         /*width: 80%;*/
         /*margin: 0 auto;*/
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-buttons svg {
+        height: 25px;
+        margin-left: 10px;
     }
 }
