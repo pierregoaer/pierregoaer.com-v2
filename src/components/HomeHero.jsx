@@ -10,7 +10,7 @@ export default function HomeHero() {
                 <div className={styles.homeHeroContainer}>
                     <div className={styles.homeHeroImg}>
                         <StaticImage
-                            src="../assets/hero.png"
+                            src="../images/hero.png"
                             alt="Logo Electricien Nîmes"
                         />
                     </div>
@@ -22,11 +22,10 @@ export default function HomeHero() {
                             Skilled in full-stack technologies including Python, JavaScript, and SQL. I have a passion
                             for building digital solutions that help solve real-life problems.</p>
                         <div className={styles.buttons}>
-                            <Link to={'/'} className="btn-secondary">Download resume</Link>
-                            <Link to={'/'} className="btn-tertiary">Contact</Link>
+                            <a href={'Resume Pierre Goaer.pdf'} download target='_blank' className="btn-secondary">Download resume</a>
+                            <Link to={'mailto:hello@pierregoaer.com'} className="btn-tertiary">Contact</Link>
                         </div>
                         <ul className={styles.socialLinks}>
-
                             <li>
                                 <a href="mailto:hello@pierregoaer.com">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

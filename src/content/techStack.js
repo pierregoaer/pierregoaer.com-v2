@@ -8,13 +8,17 @@ const techStack = [
         stack: ['Flask', 'React', 'Gatsby', 'Pandas', 'Numpy']
     },
     {
-        name: 'Database Management',
-        stack: ['MySQL', 'PostgreSQL', 'SQLite']
+        name: 'Data',
+        stack: ['MySQL', 'PostgreSQL', 'SQLite', 'GraphQL']
     },
     {
         name: 'Deployment',
         stack: ['Git', 'GitHub', 'cPanel', 'Heroku', 'Netlify']
-    }
+    },
+    {
+        name: 'CMS',
+        stack: ['Shopify', 'Cloudinary', 'WordPress', 'Squarespace']
+    },
 ]
 
 export default techStack

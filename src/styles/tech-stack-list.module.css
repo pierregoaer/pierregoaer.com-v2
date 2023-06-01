@@ -1,0 +1,23 @@
+.stack-list {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stack-item img {
+    height: 30px;
+    width: auto;
+    margin-bottom: 6px;
+}
+
+.stack-item p {
+    font-weight: 200;
+}

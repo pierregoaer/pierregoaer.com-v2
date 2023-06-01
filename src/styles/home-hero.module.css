@@ -8,7 +8,7 @@
 .home-hero-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 20px 80px;
 }
 
 .home-hero-container {
@@ -58,11 +58,14 @@
 .home-hero-text .social-links {
     position: fixed;
     top: 50%;
-    left: 30px;
+    left: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     transform: translateY(-50%);
+    padding: 15px 10px;
+    border-radius: var(--border-radius-main);
+    background-color: var(--primary-accent-color-transparent);
 }
 
 .home-hero-text .social-links svg {
@@ -85,6 +88,10 @@
         margin-top: 60px;
     }
 
+    .home-hero-inner {
+        padding: 20px;
+    }
+
     .home-hero-container {
         flex-direction: column;
     }
@@ -100,6 +107,11 @@
         left: auto;
         transform: none;
         flex-direction: row;
+        padding: 14px 20px 10px 20px; /*Compensate padding because icon is not perfectly centered vertically*/
+    }
+
+    .home-hero-text .social-links svg {
+        width: 30px;
     }
 }
 

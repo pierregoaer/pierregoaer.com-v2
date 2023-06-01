@@ -1,29 +1,22 @@
 import React from 'react'
+import TechStackList from "./TechStackList";
 import techStack from "../content/techStack";
 import * as styles from '../styles/home-tech-stack.module.css'
 
 export default function HomeTechStack() {
     const stackElements = techStack.map(stack => {
-        const stackList = stack.stack.map(tech => (
-            <div className={styles.stackItem}>
-                <img
-                    src={`../../svg/${tech}.svg`}
-                    alt={`Logo ${tech}`}
-                />
-                <p>{tech}</p>
-            </div>
-        ))
         return (
             <div className={styles.stack}>
                 <h3>{stack.name}</h3>
-                <div className={styles.stackList}>
-                    {stackList}
-                </div>
+                <TechStackList stack={stack.stack} justify={'center'}/>
             </div>
         )
     })
     return (
-        <section className={styles.homeTechStack}>
+        <section className={styles.homeTechStack}
+                 data-sal="slide-up"
+                 data-sal-delay="300"
+                 data-sal-easing="ease">
             <div className="section-inner">
                 <div className={styles.introText}>
                     <h2>The things I know</h2>
@@ -36,3 +29,14 @@ export default function HomeTechStack() {
         </section>
     )
 }
+
+// query getStackImage {
+//   allFile (filter: {name: {eq: "Python"}}) {
+//     edges {
+//       node {
+//         name
+//         relativePath
+//       }
+//     }
+//   }
+// }

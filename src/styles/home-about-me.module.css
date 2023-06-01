@@ -1,5 +1,11 @@
 .home-about-me-inner {
     max-width: 700px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 80px 20px 80px 60px;
+}
+
+@media (max-width: 800px) {
+    .home-about-me-inner {
+        padding: 80px 20px;
+    }
 }

@@ -4,6 +4,8 @@ import HomeHero from "../components/HomeHero";
 import Nav from "../components/Nav";
 import HomeTechStack from "../components/HomeTechStack";
 import HomeAboutMe from "../components/HomeAboutMe";
+import HomeMainProjects from "../components/HomeMainProjects";
+import HomeSecondaryProjects from "../components/HomeSecondaryProjects";
 
 export default function Home() {
     return (
@@ -12,6 +14,8 @@ export default function Home() {
             <HomeHero/>
             <HomeAboutMe/>
             <HomeTechStack/>
+            <HomeMainProjects/>
+            <HomeSecondaryProjects/>
         </>
     )
 }
