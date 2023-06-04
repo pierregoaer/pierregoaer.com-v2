@@ -20,7 +20,7 @@ export default function HomeContact() {
                     </p>
                     <p>You can also fill out this form and I will get back to you shortly.</p>
                 </div>
-                <form name="contact"  method="POST" netlify >
+                <form name="contact"  method="POST" data-netlify="true" >
                     <div className={styles.contactFormField}>
                         <label htmlFor="name">Name</label>
                         <input
