@@ -6,7 +6,7 @@ import HomeTechStack from "../components/HomeTechStack";
 import HomeAboutMe from "../components/HomeAboutMe";
 import HomeMainProjects from "../components/HomeMainProjects";
 import HomeSecondaryProjects from "../components/HomeSecondaryProjects";
-import HomeContact from "../components/HomeContactNew";
+import HomeContact from "../components/HomeContact";
 import Footer from "../components/Footer";
 
 export function Head() {
