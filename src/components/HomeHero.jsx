@@ -2,6 +2,7 @@ import React from 'react'
 import * as styles from '../styles/home-hero.module.css'
 import {StaticImage} from "gatsby-plugin-image";
 import {Link} from "gatsby";
+import {AnchorLink} from "gatsby-plugin-anchor-links";
 
 export default function HomeHero() {
     return (
@@ -24,7 +25,7 @@ export default function HomeHero() {
                         <div className={styles.buttons}>
                             <a href={'Resume Pierre Goaer.pdf'} download target='_blank' className="btn-secondary">Download
                                 resume</a>
-                            <Link to={'mailto:hello@pierregoaer.com'} className="btn-tertiary">Contact</Link>
+                            <AnchorLink to={'#contact'} className="btn-tertiary">Contact</AnchorLink>
                         </div>
                         <ul className={styles.socialLinks}>
                             <li>

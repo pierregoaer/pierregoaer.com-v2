@@ -31,6 +31,22 @@ module.exports = {
             options: {
                 offset: -50
             }
-        }
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "G-064BF35NNM",
+                head: true,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-robots-txt`,
+            options: {
+                host: 'https://pierregoaer.com',
+                sitemap: 'https://pierregoaer.com/sitemap-0.xml',
+                policy: [{userAgent: '*', allow: '/'}]
+            }
+        },
+        `gatsby-plugin-sitemap`
     ],
 }
