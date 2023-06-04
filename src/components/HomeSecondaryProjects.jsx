@@ -5,7 +5,7 @@ import SecondaryProjectCard from "./SecondaryProjectCard";
 
 export default function HomeSecondaryProjects() {
     const [projects, setProjects] = useState(secondaryProjects)
-    const projectsElements = projects.map(project => <SecondaryProjectCard project={project}/>)
+    const projectsElements = projects.map((project, index) => <SecondaryProjectCard project={project} key={index}/>)
 
     return (
         <section className={styles.homeSecondaryProjects}>

@@ -4,7 +4,7 @@ import MainProjectCard from "./MainProjectCard";
 import * as styles from "../styles/home-main-projects.module.css";
 
 export default function HomeMainProjects() {
-    const projectsElements = mainProjects.map(project => <MainProjectCard project={project}/>)
+    const projectsElements = mainProjects.map((project, index) => <MainProjectCard project={project} key={index}/>)
 
     return (
         <section className={styles.homeMainProjects} id="work">

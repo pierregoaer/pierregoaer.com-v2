@@ -4,11 +4,11 @@ import techStack from "../content/techStack";
 import * as styles from '../styles/home-tech-stack.module.css'
 
 export default function HomeTechStack() {
-    const stackElements = techStack.map(stack => {
+    const stackElements = techStack.map((stack, index) => {
         return (
-            <div className={styles.stack}>
+            <div className={styles.stack} key={index}>
                 <h3>{stack.name}</h3>
-                <TechStackList stack={stack.stack} justify={'center'}/>
+                <TechStackList stack={stack.stack} justify={'center'} />
             </div>
         )
     })

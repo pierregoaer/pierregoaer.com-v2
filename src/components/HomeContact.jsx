@@ -27,14 +27,14 @@ export default function HomeContact() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        if (!formData.name || !formData.email || !formData.service || !formData.timeframe || !formData.budget || !formData.message) {
-            window.alert("Certains champs requis sont vides.")
+        if (!formData.name || !formData.email || !formData.message) {
+            window.alert("All fields are required.")
             return
         }
         setMessageSubmitted(prev => !prev)
         const dataJSON = JSON.stringify(formData);
 
-        fetch('https://api.electricien-nimes.com/contact', {
+        fetch('http://127.0.0.1:3000/contact', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -42,13 +42,20 @@ export default function HomeContact() {
             },
             body: dataJSON,
         }).then(response => {
+            console.log(response)
+            console.log(response.data);
+            console.log(response.status);
+            console.log(response.statusText);
+            console.log(response.headers);
+            console.log(response.config);
             if (response.status === 200) {
                 setFormData(initialFormData)
                 setMessageSubmitted(false)
-                navigate('/merci')
+                // navigate('/merci')
+                console.log("Sent correctly!")
             } else {
                 setMessageSubmitted(false)
-                window.alert("Une erreur s'est produite, veuillez réessayer.")
+                window.alert("Something went wrong, please try again!")
 
             }
         });
