@@ -55,6 +55,12 @@ form button {
     font-weight: 400 !important;
 }
 
+.cta {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+}
+
 @media (max-width: 800px) {
     .home-contact-inner {
         padding: 80px 20px;

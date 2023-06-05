@@ -98,6 +98,10 @@ section {
     color: white;
 }
 
+.btn-primary:hover {
+    background-color: var(--secondary-accent-color);
+}
+
 .btn-secondary {
     background-color: transparent;
     color: var(--secondary-text-color);
