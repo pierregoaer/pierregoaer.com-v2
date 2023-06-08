@@ -2,15 +2,13 @@ import React from 'react'
 import * as styles from "../../styles/home-blog.module.css";
 import {graphql} from "gatsby";
 
-export default function HomeBlog({data}) {
+export default function HomeBlog() {
 
-    const blogs = data.allBlogArticle.nodes
-    console.log(blogs)
     return (
         <section className={styles.homeBlog}>
             <div className="section-inner">
                 <div className={styles.introText}>
-                    <h2>Other things I've built</h2>
+                    <h2>Blog</h2>
                     {/*<p>Here is a list of select projects I've recently built:</p>*/}
                 </div>
                 <div className={styles.container}>
@@ -22,18 +20,18 @@ export default function HomeBlog({data}) {
     )
 }
 
-export const query = graphql`
-    query allBlogs {
-        allBlogArticle {
-            nodes {
-                blurb
-                created_at
-                hero_image_url
-                originalId
-                reading_time
-                title
-                url
-            }
-        }
-    }
-`
+// export const query = graphql`
+//     query allBlogs {
+//         allBlogArticle {
+//             nodes {
+//                 blurb
+//                 created_at
+//                 hero_image_url
+//                 originalId
+//                 reading_time
+//                 title
+//                 url
+//             }
+//         }
+//     }
+// `
