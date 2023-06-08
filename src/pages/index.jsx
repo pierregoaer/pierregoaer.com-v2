@@ -31,7 +31,7 @@ export default function Home() {
             <HomeTechStack/>
             <HomeMainProjects/>
             <HomeSecondaryProjects/>
-            {/*<HomeBlog/>*/}
+            <HomeBlog/>
             <HomeContact/>
             <Footer/>
         </>

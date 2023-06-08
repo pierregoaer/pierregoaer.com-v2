@@ -1,12 +1,13 @@
 import React from 'react'
 import * as styles from "../styles/home-blog.module.css";
 import {graphql, useStaticQuery} from "gatsby";
+import BlogCard from "./BlogCard";
 
 export default function HomeBlog() {
 
     const data = useStaticQuery(graphql`
         query allBlogs {
-            allBlogArticle {
+            allBlogArticle(sort: {id: ASC}) {
                 nodes {
                     blurb
                     created_at
@@ -15,6 +16,8 @@ export default function HomeBlog() {
                     reading_time
                     title
                     url
+                    id
+                    tags
                 }
             }
         }
@@ -22,6 +25,7 @@ export default function HomeBlog() {
 
     const blogs = data.allBlogArticle.nodes
     console.log(blogs)
+    const blogCards = blogs.map(blog => <BlogCard key={blog.id} blogData={blog}/>)
     return (
         <section className={styles.homeBlog}>
             <div className="section-inner">
@@ -30,7 +34,7 @@ export default function HomeBlog() {
                     {/*<p>Here is a list of select projects I've recently built:</p>*/}
                 </div>
                 <div className={styles.container}>
-                    {/*{projectsElements}*/}
+                    {blogCards}
                 </div>
                 {/*<button className="btn-secondary">See more</button>*/}
             </div>
