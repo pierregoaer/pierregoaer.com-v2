@@ -8,6 +8,7 @@ import HomeMainProjects from "../components/HomeMainProjects";
 import HomeSecondaryProjects from "../components/HomeSecondaryProjects";
 import HomeContact from "../components/HomeContact";
 import Footer from "../components/Footer";
+import HomeBlog from "../components/HomeBlog";
 
 export function Head() {
     return (
@@ -30,6 +31,7 @@ export default function Home() {
             <HomeTechStack/>
             <HomeMainProjects/>
             <HomeSecondaryProjects/>
+            <HomeBlog/>
             <HomeContact/>
             <Footer/>
         </>
