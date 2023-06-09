@@ -73,7 +73,7 @@ export default function BlogArticle({data}) {
 }
 
 export const query = graphql`
-    query MyQuery($url: String) {
+    query getArticle($url: String) {
         blogArticle(url: {eq: $url}) {
             article
             created_at

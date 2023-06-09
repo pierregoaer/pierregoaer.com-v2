@@ -1,0 +1,45 @@
+.sidebar-links-container {
+    position: relative;
+}
+
+.sidebar-links {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-50%);
+    padding: 15px 10px;
+    border-radius: var(--border-radius-main);
+    background-color: var(--primary-accent-color-transparent);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+}
+
+.sidebar-links svg {
+    width: 20px;
+    fill: var(--primary-accent-color);
+    transition: all .3s ease-in-out;
+}
+
+.sidebar-links svg:hover {
+    fill: var(--secondary-accent-color);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 800px) {
+    .sidebar-links {
+        /*position: absolute;*/
+        /*top: -70px;*/
+        top: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        padding: 14px 20px 10px 20px; /*Compensate padding because icon is not perfectly centered vertically*/
+    }
+
+    .sidebar-links svg {
+        width: 22px;
+    }
+}

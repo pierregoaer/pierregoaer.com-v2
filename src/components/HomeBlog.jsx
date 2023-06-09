@@ -23,7 +23,6 @@ export default function HomeBlog() {
 	`);
 
 	const blogs = data.allBlogArticle.nodes;
-	console.log(blogs);
 	const blogCards = blogs.map(blog => <BlogCard key={blog.id} blogData={blog} />);
 	return (
 		<section className={styles.homeBlog}>

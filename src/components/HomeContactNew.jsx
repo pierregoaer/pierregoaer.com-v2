@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import * as styles from "../styles/home-contact.module.css";
 import {navigate} from "gatsby";
+import axios from "axios";
 
 export default function HomeContactNew() {
     const initialFormData = {
@@ -10,7 +11,6 @@ export default function HomeContactNew() {
     }
 
     const [formData, setFormData] = useState(initialFormData);
-
     const [messageSubmitted, setMessageSubmitted] = useState(false)
 
     function handleChange(event) {
@@ -24,42 +24,27 @@ export default function HomeContactNew() {
         });
     }
 
-
-    function handleSubmit(event) {
-        event.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         if (!formData.name || !formData.email || !formData.message) {
             window.alert("All fields are required.")
             return
         }
         setMessageSubmitted(prev => !prev)
-        const dataJSON = JSON.stringify(formData);
-
-        fetch('http://127.0.0.1:3000/contact', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: dataJSON,
-        }).then(response => {
-            console.log(response)
-            console.log(response.data);
-            console.log(response.status);
-            console.log(response.statusText);
-            console.log(response.headers);
-            console.log(response.config);
-            if (response.status === 200) {
-                setFormData(initialFormData)
-                setMessageSubmitted(false)
-                // navigate('/merci')
-                console.log("Sent correctly!")
-            } else {
-                setMessageSubmitted(false)
-                window.alert("Something went wrong, please try again!")
-
-            }
-        });
-    }
+        try {
+            await axios.post(
+                "https://mywebsite.pierregoaer.dev/contact",
+                formData
+            );
+            setFormData(initialFormData)
+            // window.alert("Thank you, your message was sent successfully!")
+            await navigate('/thank-you')
+        } catch (error) {
+            console.error(error);
+            window.alert("Something went wrong, please try again!")
+        }
+        setMessageSubmitted(false)
+    };
 
     return (
         <section className={styles.homeContact} id="contact">

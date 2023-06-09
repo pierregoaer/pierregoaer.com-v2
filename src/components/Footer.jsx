@@ -11,7 +11,7 @@ export default function Footer() {
                     <li><AnchorLink to={'#about'}>About</AnchorLink></li>
                     <li><AnchorLink to={'#tech'}>Tech</AnchorLink></li>
                     <li><AnchorLink to={'#work'}>Work</AnchorLink></li>
-                    {/*<li><AnchorLink to={'#blog'}>Blog</AnchorLink></li>*/}
+                    <li><Link to={'/blog'}>Blog</Link></li>
                     <li><AnchorLink to={'#contact'}>Contact</AnchorLink></li>
                 </ul>
                 <ul className={styles.socials}>

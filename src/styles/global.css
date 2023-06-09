@@ -176,6 +176,11 @@ section {
 }
 
 @media (max-width: 450px) {
+    h2 {
+        display: block;
+        text-align: center !important;
+    }
+
     h2::after {
         width: 0;
     }

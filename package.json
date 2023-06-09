@@ -13,9 +13,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "gatsby": "^5.9.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
-    "gatsby-plugin-google-analytics": "^5.10.0",
+    "gatsby-plugin-google-gtag": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-robots-txt": "^1.8.0",

@@ -33,13 +33,6 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: "G-LQB80DXPRL",
-                head: true,
-            },
-        },
-        {
             resolve: `gatsby-plugin-robots-txt`,
             options: {
                 host: 'https://pierregoaer.com',
@@ -47,6 +40,17 @@ module.exports = {
                 policy: [{userAgent: '*', allow: '/'}]
             }
         },
-        `gatsby-plugin-sitemap`
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+                trackingIds: [
+                    'G-LQB80DXPRL',
+                ],
+                pluginConfig: {
+                    head: true,
+                },
+            },
+        },
     ],
 }

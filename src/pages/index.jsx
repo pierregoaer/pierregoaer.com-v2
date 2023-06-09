@@ -1,15 +1,14 @@
 import * as React from "react"
 import '../styles/global.css'
 import HomeHero from "../components/HomeHero";
-import Nav from "../components/Nav";
 import HomeTechStack from "../components/HomeTechStack";
 import HomeAboutMe from "../components/HomeAboutMe";
 import HomeMainProjects from "../components/HomeMainProjects";
 import HomeSecondaryProjects from "../components/HomeSecondaryProjects";
 import HomeContact from "../components/HomeContact";
-import Footer from "../components/Footer";
 import HomeBlog from "../components/HomeBlog";
 import Layout from "../components/Layout";
+import HomeContactNew from "../components/HomeContactNew";
 
 export function Head() {
     return (
@@ -32,7 +31,7 @@ export default function Home() {
             <HomeMainProjects/>
             <HomeSecondaryProjects/>
             <HomeBlog/>
-            <HomeContact/>
+            <HomeContactNew/>
         </Layout>
     )
 }
