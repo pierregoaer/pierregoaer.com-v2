@@ -9,6 +9,7 @@ import HomeSecondaryProjects from "../components/HomeSecondaryProjects";
 import HomeContact from "../components/HomeContact";
 import Footer from "../components/Footer";
 import HomeBlog from "../components/HomeBlog";
+import Layout from "../components/Layout";
 
 export function Head() {
     return (
@@ -24,8 +25,7 @@ export function Head() {
 
 export default function Home() {
     return (
-        <>
-            <Nav/>
+        <Layout>
             <HomeHero/>
             <HomeAboutMe/>
             <HomeTechStack/>
@@ -33,7 +33,6 @@ export default function Home() {
             <HomeSecondaryProjects/>
             <HomeBlog/>
             <HomeContact/>
-            <Footer/>
-        </>
+        </Layout>
     )
 }

@@ -1,37 +1,42 @@
-import React from 'react'
-import * as styles from "../../styles/home-blog.module.css";
-import {graphql} from "gatsby";
+import React from 'react';
+import * as styles from '../../styles/blog-page.module.css';
+import { graphql, useStaticQuery } from 'gatsby';
+import Layout from '../../components/Layout';
+import BlogCard from '../../components/BlogCard';
 
 export default function HomeBlog() {
+	const data = useStaticQuery(graphql`
+		query allBlogsBlogPage {
+			allBlogArticle(sort: { originalId: DESC }) {
+				nodes {
+					blurb
+					created_at
+					hero_image_url
+					originalId
+					reading_time
+					title
+					url
+					id
+					tags
+				}
+			}
+		}
+	`);
 
-    return (
-        <section className={styles.homeBlog}>
-            <div className="section-inner">
-                <div className={styles.introText}>
-                    <h2>Blog</h2>
-                    {/*<p>Here is a list of select projects I've recently built:</p>*/}
-                </div>
-                <div className={styles.container}>
-                    {/*{projectsElements}*/}
-                </div>
-                {/*<button className="btn-secondary">See more</button>*/}
-            </div>
-        </section>
-    )
+	const blogs = data.allBlogArticle.nodes;
+	console.log(blogs);
+	const blogCards = blogs.map(blog => <BlogCard key={blog.id} blogData={blog} />);
+
+	return (
+		<Layout>
+			<section className={styles.blogIntro}>
+				<div className={styles.introText}>
+					<h1>Blog</h1>
+					<p>Every week I share insights on things that I learn during my software developer and content creator journey.</p>
+					<p>Most of the things I share here revolve around technology, health, productivity and overall how to live a better life while having fun with it.</p>
+				</div>
+			</section>
+			<section className={styles.blogsContainer}>{blogCards}</section>
+		</Layout>
+	);
 }
-
-// export const query = graphql`
-//     query allBlogs {
-//         allBlogArticle {
-//             nodes {
-//                 blurb
-//                 created_at
-//                 hero_image_url
-//                 originalId
-//                 reading_time
-//                 title
-//                 url
-//             }
-//         }
-//     }
-// `

@@ -41,7 +41,7 @@
 
 .blog-description .tags li {
     width: fit-content;
-    padding: 5px;
+    padding: 5px 10px;
     background-color: var(--light-grey);
     color: var(--dark-grey);
     border-radius: var(--border-radius-main);
@@ -61,8 +61,8 @@
     }
 
     .blog-description .title {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    line-height: 1.3;
-}
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
 }

@@ -30,7 +30,7 @@ export default function Nav() {
                     <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#about'} >About</AnchorLink></li>
                     <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#tech'}>Tech</AnchorLink></li>
                     <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#work'}>Work</AnchorLink></li>
-                    {/*<li onClick={handleDisplayMobileNav}><AnchorLink to={'/#blog'}>Blog</AnchorLink></li>*/}
+                    <li onClick={handleDisplayMobileNav}><Link to={'/blog'}>Blog</Link></li>
                     <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#contact'} className="btn-primary">Contact</AnchorLink></li>
                 </ul>
             </div>

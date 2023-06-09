@@ -1,0 +1,115 @@
+article {
+    max-width: 900px;
+    margin: 200px auto 140px auto;
+    padding: 0 20px;
+}
+
+.blog-article-header {
+    text-align: center;
+}
+
+.blog-article-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-accent-color);
+    margin-bottom: 10px;
+}
+
+.blog-article-header .article-date {
+    color: var(--tertiary-text-color);
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+.blog-article-header img {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 90px auto;
+    border-radius: 8px;
+    /*box-shadow: var(--box-shadow-main);*/
+}
+
+.blog-article-body {
+    margin-bottom: 100px;
+}
+
+.blog-article-body h2 {
+    font-size: 1.8rem;
+    color: var(--primary-accent-color);
+    margin: 40px 0 20px 0;
+}
+
+.blog-article-body p,
+.blog-article-body li {
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.blog-article-body p,
+.blog-article-body li:last-child {
+    margin-bottom: 25px;
+}
+
+.blog-article-body a {
+    color: var(--primary-accent-color);
+}
+
+.blog-article-body li {
+    margin-bottom: 10px;
+    list-style: square;
+}
+
+.blog-article-body img {
+    max-width: 80%;
+    display: block;
+    margin: 60px auto;
+    border-radius: 8px;
+}
+
+.blog-article-body ul,
+.blog-article-body ol {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.share-btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--medium-grey);
+    padding-top: 15px;
+}
+
+.share-btns-container p {
+    margin: 0 10px 0 0;
+}
+
+.share-btns-container svg {
+    width: 22px;
+    margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    article {
+        margin: 70px auto 140px auto;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .blog-article-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .blog-article-body p,
+    .blog-article-body li {
+        font-size: 1.1rem;
+    }
+
+    .blog-article-body img {
+        width: 100%;
+    }
+}

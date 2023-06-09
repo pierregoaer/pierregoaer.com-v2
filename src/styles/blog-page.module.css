@@ -1,0 +1,18 @@
+.blog-intro {
+    background-color: var(--light-grey);
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 180px 20px 80px 20px;
+    text-align: center;
+}
+
+.intro-text h1 {
+    margin-bottom: 30px;
+}
+
+.blogs-container {
+    padding: 100px 0;
+}

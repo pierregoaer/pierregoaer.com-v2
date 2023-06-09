@@ -11,12 +11,12 @@ export default function BlogCard({blogData}) {
                 <div className={styles.date}>
                     {new Date(blogData.created_at).toLocaleDateString("en-US", dateOptions)} — {blogData.reading_time}min read
                 </div>
-                <h3 className={styles.title}><Link to={`blog/${blogData.url}`}>{blogData.title}</Link></h3>
+                <h3 className={styles.title}><Link to={`/blog/${blogData.url}`}>{blogData.title}</Link></h3>
                 <p className={styles.blurb}>{blogData.blurb}</p>
                 <ul className={styles.tags}>{tags}</ul>
             </div>
             <img
-                src={`https://res.cloudinary.com/dg8awj55m/image/upload/c_fill,h_150,w_250,f_auto/v1686175131/pierregoaer.com/images/${blogData.hero_image_url}`}
+                src={`https://res.cloudinary.com/dg8awj55m/image/upload/c_fill,g_auto,h_150,w_250,f_auto/v1686175131/pierregoaer.com/images/${blogData.hero_image_url}`}
                 alt=""
                 className={styles.blogImage}
             />
