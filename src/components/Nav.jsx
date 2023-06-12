@@ -27,11 +27,11 @@ export default function Nav() {
                     />
                 </AnchorLink>
                 <ul className={styles.navMenu} data-visible={mobileNavVisible}>
-                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#about'} >About</AnchorLink></li>
-                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#tech'}>Tech</AnchorLink></li>
-                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#work'}>Work</AnchorLink></li>
-                    <li onClick={handleDisplayMobileNav}><Link to={'/blog'}>Blog</Link></li>
-                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#contact'} className="btn-primary">Contact</AnchorLink></li>
+                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#about'} >ABOUT</AnchorLink></li>
+                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#tech'}>TECH</AnchorLink></li>
+                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#work'}>WORK</AnchorLink></li>
+                    <li onClick={handleDisplayMobileNav}><Link to={'/blog'}>BLOG</Link></li>
+                    <li onClick={handleDisplayMobileNav}><AnchorLink to={'/#contact'} className="btn-primary">CONTACT</AnchorLink></li>
                 </ul>
             </div>
             <div className={styles.mobileNavIconContainer} data-visible={mobileNavVisible}

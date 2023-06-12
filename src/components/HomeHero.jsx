@@ -12,7 +12,7 @@ export default function HomeHero() {
                     <div className={styles.homeHeroImg}>
                         <StaticImage
                             src="../images/hero.png"
-                            alt="Logo Electricien Nîmes"
+                            alt="Pierre Goaer | Software Developer | Content Creator"
                         />
                     </div>
 

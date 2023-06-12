@@ -4,25 +4,76 @@ article {
     padding: 0 20px 0 90px;
 }
 
+/* --- Blog header --- */
 .blog-article-header {
-    text-align: center;
     max-width: 700px;
     margin: 0 auto;
+}
+
+.blog-article-header .article-date {
+    font-family: 'Merriweather', serif;
+    color: var(--tertiary-text-color);
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0;
 }
 
 .blog-article-header h1 {
     font-size: 2.5rem;
     line-height: 1.3;
     color: var(--primary-accent-color);
-    margin-bottom: 10px;
+    margin: 5px 0 25px 0;
+    text-align: left;
 }
 
-.blog-article-header .article-date {
-    color: var(--tertiary-text-color);
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 60px;
+.blog-article-header .author-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+}
+
+.blog-article-header .author {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.blog-article-header .author p {
+    padding-right: 10px;
+    border-right: 1px solid var(--medium-grey);
+}
+
+.blog-article-header .author-tags img {
+    width: 50px;
+    height: auto;
+}
+
+.blog-article-header .author-tags p,
+.blog-article-header .author-tags li {
+    margin: 0;
+}
+
+
+.blog-article-header .tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.blog-article-header .tags li {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    border-radius: var(--border-radius-main);
+    font-weight: 200;
+    margin-bottom: 0;
 }
 
 .blog-article-header figure,
@@ -63,6 +114,8 @@ article {
     font-style: italic;
 }
 
+/* --- Blog body --- */
+
 .blog-article-body {
     margin-bottom: 100px;
 }
@@ -77,13 +130,19 @@ article {
     font-size: 1.4rem;
     color: var(--primary-accent-color);
     margin: 40px 0 20px 0;
+    font-family: 'Merriweather', serif;
 }
 
 .blog-article-body p,
 .blog-article-body li {
-    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
     font-weight: 200;
-    line-height: 30px;
+    line-height: 2;
+}
+
+.blog-article-body strong {
+    font-weight: 600;
 }
 
 .blog-article-body p,
@@ -125,13 +184,16 @@ article {
     /*border: 1px solid var(--dark-grey);*/
     background-color: var(--primary-accent-color-transparent);
     border-radius: var(--border-radius-main);
+    font-family: 'Merriweather', serif;
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.6;
 }
+
 .blog-article-body blockquote::before {
     content: "\"";
     position: absolute;
+    font-family: 'Poppins', sans-serif;
     font-size: 8rem;
     color: var(--dark-grey);
     top: -55px;
@@ -140,23 +202,42 @@ article {
 
 .blog-article-body blockquote span {
     font-weight: 500;
+    font-family: 'Merriweather', serif;
+}
+
+.share-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid var(--medium-grey);
+    padding-top: 15px;
 }
 
 .share-btns-container {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    border-top: 1px solid var(--medium-grey);
-    padding-top: 15px;
+    gap: 10px;
 }
 
-.share-btns-container p {
-    margin: 0 10px 0 0;
+.share-container p {
+    margin: 0;
 }
 
-.share-btns-container svg {
+.share-container a {
+    padding: 7px;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.share-container svg {
     width: 22px;
-    margin-right: 5px;
+    fill: var(--primary-accent-color);
+    /*margin-right: 5px;*/
 }
 
 
@@ -166,8 +247,22 @@ article {
         padding: 0 20px;
     }
 
+    .blog-article-header .author-tags {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog-article-header .author p {
+        border-right: 0;
+    }
+
     .blog-article-header img {
         width: 100%;
+    }
+
+    .blog-article-body h2 {
+        display: inline-block;
+        text-align: left;
     }
 }
 
@@ -183,5 +278,9 @@ article {
 
     .blog-article-body figure {
         max-width: 100%;
+    }
+
+    .share-container {
+        flex-direction: column;
     }
 }

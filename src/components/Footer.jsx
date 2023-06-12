@@ -8,11 +8,11 @@ export default function Footer() {
         <footer>
             <div className={styles.main}>
                 <ul className={styles.nav}>
-                    <li><AnchorLink to={'#about'}>About</AnchorLink></li>
-                    <li><AnchorLink to={'#tech'}>Tech</AnchorLink></li>
-                    <li><AnchorLink to={'#work'}>Work</AnchorLink></li>
+                    <li><AnchorLink to={'/#about'}>About</AnchorLink></li>
+                    <li><AnchorLink to={'/#tech'}>Tech</AnchorLink></li>
+                    <li><AnchorLink to={'/#work'}>Work</AnchorLink></li>
                     <li><Link to={'/blog'}>Blog</Link></li>
-                    <li><AnchorLink to={'#contact'}>Contact</AnchorLink></li>
+                    <li><AnchorLink to={'/#contact'}>Contact</AnchorLink></li>
                 </ul>
                 <ul className={styles.socials}>
                             <li>

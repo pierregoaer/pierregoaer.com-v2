@@ -20,6 +20,8 @@
     font-weight: 200;
     font-size: .95rem;
     margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
 }
 
 .blog-description .title {
