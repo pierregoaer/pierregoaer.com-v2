@@ -25,13 +25,42 @@ article {
     margin-bottom: 60px;
 }
 
-.blog-article-header img {
+.blog-article-header figure,
+.blog-article-body figure {
     width: auto;
     height: auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     margin: 0 auto 90px auto;
+}
+
+.blog-article-header figure {
+    width: auto;
+    height: auto;
+}
+
+.blog-article-body figure {
+    max-width: 80%;
+    margin: 60px auto;
+}
+
+.blog-article-header figure img,
+.blog-article-body figure img {
+    width: 100%;
     border-radius: 8px;
+    /*bord*/
     /*box-shadow: var(--box-shadow-main);*/
+}
+
+.blog-article-header figure figcaption,
+.blog-article-body figure figcaption {
+    text-align: center;
+    color: var(--dark-grey);
+    font-size: .9rem;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .blog-article-body {
@@ -41,12 +70,19 @@ article {
 .blog-article-body h2 {
     font-size: 1.8rem;
     color: var(--primary-accent-color);
+    margin: 80px 0 20px 0;
+}
+
+.blog-article-body h3 {
+    font-size: 1.4rem;
+    color: var(--primary-accent-color);
     margin: 40px 0 20px 0;
 }
 
 .blog-article-body p,
 .blog-article-body li {
     font-size: 1.2rem;
+    font-weight: 200;
     line-height: 30px;
 }
 
@@ -56,25 +92,54 @@ article {
 }
 
 .blog-article-body a {
-    color: var(--primary-accent-color);
+    color: var(--secondary-accent-color);
 }
 
-.blog-article-body li {
+.blog-article-body a svg {
+    fill: var(--secondary-accent-color);
+    width: 15px;
+}
+
+.blog-article-body ul li {
     margin-bottom: 10px;
     list-style: square;
 }
 
-.blog-article-body img {
-    max-width: 80%;
-    display: block;
-    margin: 60px auto;
-    border-radius: 8px;
+.blog-article-body ol li {
+    margin-bottom: 10px;
+    list-style: decimal;
 }
+
 
 .blog-article-body ul,
 .blog-article-body ol {
     width: 90%;
     margin: 0 auto;
+}
+
+.blog-article-body blockquote {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    padding: 25px;
+    /*border: 1px solid var(--dark-grey);*/
+    background-color: var(--primary-accent-color-transparent);
+    border-radius: var(--border-radius-main);
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.blog-article-body blockquote::before {
+    content: "\"";
+    position: absolute;
+    font-size: 8rem;
+    color: var(--dark-grey);
+    top: -55px;
+    left: -15px;
+}
+
+.blog-article-body blockquote span {
+    font-weight: 500;
 }
 
 .share-btns-container {
@@ -116,7 +181,7 @@ article {
         font-size: 1.1rem;
     }
 
-    .blog-article-body img {
-        width: 100%;
+    .blog-article-body figure {
+        max-width: 100%;
     }
 }
