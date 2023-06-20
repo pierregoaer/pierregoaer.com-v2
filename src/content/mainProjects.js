@@ -1,5 +1,28 @@
 const mainProjects = [
     {
+        title: 'Relocation with ChatGPT',
+        imageName: 'relocation_with_chatgpt',
+        tagline: 'A tool for remote workers.',
+        description: "Why stay in the same place when you can travel? Answer a few questions and this <a href=\"https://openai.com/blog/chatgpt\" class=\"text-link\" target=\"_blank\">ChatGPT</a> powered app will tell you where to move, based on your preferences. And using Google's <a href=\"https://developers.google.com/maps/documentation/places/web-service/overview\" class=\"text-link\" target=\"_blank\">Places API</a>, it will show you a picture of your new city.",
+        stack: ['Python', 'Gatsby', 'ChatGPT', 'Netlify', 'cPanel'],
+        links: [
+            {
+                type: 'app',
+                url: 'https://relocation-chatgpt.netlify.app'
+            },
+            {
+                type: 'code',
+                name: 'See API code',
+                url: 'https://github.com/pierregoaer/relocation-chatgpt-api'
+            },
+            {
+                type: 'code',
+                name: 'See app code',
+                url: 'https://github.com/pierregoaer/relocation-chatgpt'
+            }
+        ]
+    },
+    {
         title: 'Electrician Nîmes',
         imageName: 'electricien_nimes',
         tagline: 'Portfolio website for an electrician.',
