@@ -3,7 +3,7 @@
 
 :root {
     --primary-accent-color: #0b394c;
-    --secondary-accent-color: #2191ce;
+    --secondary-accent-color: #1e80b4;
     --primary-accent-color-transparent: rgba(11, 57, 76, .1);
     --primary-text-color: #404040;
     --secondary-text-color: #656565;
@@ -15,6 +15,10 @@
     --black: #1f1f1f;
 
     --border-radius-main: .5rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {

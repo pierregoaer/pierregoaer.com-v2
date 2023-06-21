@@ -2,7 +2,8 @@ import React from 'react';
 
 import Layout from "../components/Layout";
 import {graphql} from "gatsby";
-import * as styles from '../styles/blog-article.module.css';
+// import * as styles from '../styles/blog-article.module.css';
+import '../styles/blog-article.css'
 import {StaticImage} from "gatsby-plugin-image";
 
 export function Head({data}) {
@@ -34,12 +35,12 @@ export default function BlogArticle({data}) {
     return (
         <Layout>
             <article>
-                <div className={styles.blogArticleHeader}>
-                    <p className={styles.articleDate}> {new Date(curBlog.created_at).toLocaleDateString("en-US", dateOptions)} — {curBlog.reading_time}min
+                <div className="blog-article-header">
+                    <p className="article-date"> {new Date(curBlog.created_at).toLocaleDateString("en-US", dateOptions)} — {curBlog.reading_time}min
                         read</p>
                     <h1>{curBlog.title}</h1>
-                    <div className={styles.authorTags}>
-                        <div className={styles.author}>
+                    <div className="author-tags">
+                        <div className="author">
 
                             <StaticImage
                                 src="../images/hero.png"
@@ -47,7 +48,7 @@ export default function BlogArticle({data}) {
                             />
                             <p>Pierre Goaer</p>
                         </div>
-                        <ul className={styles.tags}>{tags}</ul>
+                        <ul className="tags">{tags}</ul>
                     </div>
                     <figure>
                         <img
@@ -56,12 +57,12 @@ export default function BlogArticle({data}) {
                         <figcaption>{curBlog.hero_image_caption && `Source: ${curBlog.hero_image_caption}`}</figcaption>
                     </figure>
                 </div>
-                <div className={styles.blogArticleBody}>
+                <div className="blog-article-body">
                     {articleHTML}
                 </div>
-                <div className={styles.shareContainer}>
+                <div className="share-container">
                     <p>Share this article on</p>
-                    <div className={styles.shareBtnsContainer}>
+                    <div className="share-btns-container">
 
                         <a href={`https://www.linkedin.com/sharing/share-offsite?&url=https://pierregoaer.com/blog/${curBlog.url}`}
                            target="_blank">
